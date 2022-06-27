@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "group": "build",
+            "type": "shell",
+            "command": "cd /home/$USER/dev_ws && colcon build --packages-select pcl_example --cmake-args '-DCMAKE_BUILD_TYPE=Debug' --event-handlers console_direct+"
+            
+        },
+        {
+            "label": "test",
+            "group": "test",
+            "type": "shell",
+            "command": "cd /home/$USER/dev_ws && colcon test --packages-select pcl_example --event-handlers console_direct+"
+        }
+       
+    ]
+}
